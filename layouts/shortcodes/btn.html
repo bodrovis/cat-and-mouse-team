@@ -1,0 +1,5 @@
+{{- $href := .Get "href" -}}
+<a href="{{ $href }}" rel="noopener" target="_blank"
+   class="text-slate-900 border border-slate-900 px-4 py-2 rounded-lg text-lg sm:text-xl hover:bg-slate-900 hover:text-white transition duration-300 inline-flex items-center space-x-2">
+  <span>{{ .Inner }}</span><span>&#x2197;</span>
+</a>

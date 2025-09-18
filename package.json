@@ -1,0 +1,12 @@
+{
+  "name": "cat-mouse",
+  "scripts": {
+    "build": "hugo --minify --gc",
+    "deploy": "hugo --minify --gc && firebase deploy",
+    "dev": "hugo server"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+@theme {
+  --color-customYellow-light: #FBBF24;
+  --color-green-500: #38a169;
+}

@@ -1,0 +1,6 @@
+{{ define "title" -}}
+  {{- if .Title -}}{{ .Title }} | {{ end -}}{{ .Site.Title -}}
+{{- end }}
+{{ define "main" -}}
+  {{ .Content }}
+{{- end }}

@@ -1,0 +1,10 @@
+{{ define "title" }}
+Страница не найдена | {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<h3 class="text-2xl font-semibold mb-2">Такой страницы нет!</h3>
+<p class="mt-4 text-xl">Извините, но запрошенной страницы у нас не имеется.</p>
+<div class="space-y-4 mb-6 mt-6">
+  <a href="/" class="border border-slate-900 px-4 py-2 rounded-lg text-xl hover:bg-slate-900 hover:text-white transition duration-300">Лучше вернуться на главную</a>
+</div>
+{{ end }}

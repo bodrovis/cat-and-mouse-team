@@ -1,0 +1,8 @@
+{{- $id := .Get "id" | default (.Get 0) -}}
+<h3 id="{{ $id | safeURL }}" class="group text-xl sm:text-2xl font-semibold mb-2">
+  {{ .Inner }}
+  <a href="#{{ $id | safeURL }}" aria-label="Permalink to this section"
+     class="opacity-0 group-hover:opacity-100 transition ml-2 text-slate-500 hover:text-slate-700">
+    #
+  </a>
+</h3>

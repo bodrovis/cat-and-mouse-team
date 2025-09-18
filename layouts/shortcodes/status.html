@@ -1,0 +1,6 @@
+{{- $variant := .Get "variant" | default "done" -}}
+{{- $label := .Inner -}}
+{{- $cls := cond (eq $variant "done") "bg-green-500" (cond (eq $variant "progress") "bg-yellow-500" "bg-slate-500") -}}
+<span class="{{$cls}} text-white px-4 py-2 rounded-lg inline-flex items-center">
+  &#x2714; {{ $label }}
+</span>
