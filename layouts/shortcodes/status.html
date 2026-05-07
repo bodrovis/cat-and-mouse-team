@@ -1,6 +1,18 @@
 {{- $variant := .Get "variant" | default "done" -}}
 {{- $label := .Inner -}}
-{{- $cls := cond (eq $variant "done") "bg-green-500" (cond (eq $variant "progress") "bg-yellow-500" "bg-slate-500") -}}
-<span class="{{$cls}} text-white px-4 py-2 rounded-lg inline-flex items-center">
-  &#x2714; {{ $label }}
+
+{{- $cls := dict
+  "done" "bg-green-500"
+  "progress" "bg-yellow-500"
+  "default" "bg-slate-500"
+-}}
+
+{{- $bg := index $cls $variant | default $cls.default -}}
+
+<span class="{{ $bg }} text-white px-4 py-2 rounded-lg inline-flex items-center gap-2 font-semibold">
+  <svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.31a1 1 0 0 1-1.42.006L3.29 9.27a1 1 0 1 1 1.42-1.414l4.04 4.04 6.54-6.6a1 1 0 0 1 1.414-.006Z" clip-rule="evenodd" />
+  </svg>
+
+  <span>{{ $label }}</span>
 </span>

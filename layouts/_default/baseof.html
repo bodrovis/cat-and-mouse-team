@@ -1,46 +1,85 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="{{ .Site.Language.Locale | default "ru-RU" }}" dir="{{ .Site.Language.Direction | default "ltr" }}">
 
 <head>
+  {{- $siteTitle := .Site.Title -}}
+  {{- $defaultDescription := .Site.Params.description | default "Команда переводчиков Cat & Mouse. Переводы игр и руководства." -}}
+
+  {{- $title := $siteTitle -}}
+  {{- if eq .Kind "404" -}}
+    {{- $title = printf "Страница не найдена | %s" $siteTitle -}}
+  {{- else if not .IsHome -}}
+    {{- with .Title -}}
+      {{- $title = printf "%s | %s" . $siteTitle -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $description := $defaultDescription -}}
+  {{- with .Description -}}
+    {{- $description = . | plainify | htmlUnescape -}}
+  {{- end -}}
+
+  {{- $robots := "index, follow" -}}
+  {{- if eq .Kind "404" -}}
+    {{- $robots = "noindex, follow" -}}
+  {{- end -}}
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Команда переводчиков Cat &amp; Mouse. Переводы игр и руководства.">
-  <meta name="robots" content="all">
+  <meta name="description" content="{{ $description }}">
+  <meta name="robots" content="{{ $robots }}">
+
+  <title>{{ $title }}</title>
 
   <link rel="canonical" href="{{ .Permalink }}">
-  <meta property="og:title" content="{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
   <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ $siteTitle }}">
+  <meta property="og:locale" content="{{ .Site.Language.Locale | default "ru-RU" }}">
   <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  {{- with .Site.Params.ogImage }}
+    <meta property="og:image" content="{{ . | absURL }}">
+  {{- end }}
 
-  {{ with (templates.Defer (dict "key" "global")) }}
-  {{ partial "css.html" . }}
-  {{ end }}
+  <meta name="twitter:card" content="{{ if .Site.Params.ogImage }}summary_large_image{{ else }}summary{{ end }}">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+
+  {{- with .OutputFormats.Get "RSS" }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $siteTitle }}">
+  {{- end }}
+
+  {{- with (templates.Defer (dict "key" "global")) }}
+    {{ partial "css.html" . }}
+  {{- end }}
 
   <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 </head>
 
-<body class="bg-white {{ .Type }} {{ .Kind }}">
+<body class="bg-white type-{{ .Type | urlize }} kind-{{ .Kind | urlize }}">
   {{ partial "header.html" . }}
 
   <main class="container mx-auto p-4 sm:p-8">
-    {{ block "main" . }}
-    {{ end }}
+    {{ block "main" . }}{{ end }}
   </main>
 
-<footer class="border-t border-slate-300 bg-slate-50 text-slate-700 text-center px-4 py-8 mt-12">
-  <p class="font-semibold text-lg">&copy; {{ now.Format "2006" }} Cat&amp;Mouse Team</p>
+  <footer class="border-t border-slate-300 bg-slate-50 text-slate-700 text-center px-4 py-8 mt-12">
+    <p class="font-semibold text-lg">
+      &copy; {{ now.Format "2006" }} Cat&amp;Mouse Team
+    </p>
 
-  <p class="mt-2 max-w-2xl mx-auto text-sm leading-relaxed">
-    Использование и распространение наших переводов и материалов возможно только с согласия команды Cat&amp;Mouse. См. <span class="italic">Директиву 2001/29/EC Европейского парламента и Совета</span>.
-  </p>
-</footer>
-
+    <p class="mt-2 max-w-2xl mx-auto text-sm leading-relaxed">
+      Использование и распространение наших переводов и материалов возможно только с согласия команды Cat&amp;Mouse.
+      См. <span class="italic">Директиву 2001/29/EC Европейского парламента и Совета</span>.
+    </p>
+  </footer>
 </body>
 
 </html>

@@ -1,9 +1,13 @@
 baseURL = 'https://catandmouseteam.xyz/'
-languageCode = 'ru-RU'
+locale = 'ru-RU'
+defaultContentLanguage = 'ru'
 title = 'Cat and Mouse team'
 
-disableKinds = ["taxonomy"]
+disableKinds = ["taxonomy", "term"]
 
+[params]
+  description = 'Команда переводчиков Cat & Mouse. Переводы игр и руководства.'
+  
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -16,12 +20,6 @@ disableKinds = ["taxonomy"]
 
 [minify]
   minifyOutput = true
-  [minify.tdewolff.html]
-    keepWhitespace = false
-  [minify.tdewolff.css]
-    keepCSS2 = false
-  [minify.tdewolff.js]
-    keepVarNames = false
     
 [outputs]
   home    = ["HTML", "RSS"]

@@ -1,17 +1,51 @@
-<header class="border-b border-slate-300 bg-slate-50 text-center py-12 flex flex-col items-center">
-  <a href="{{ "/" | relURL }}" aria-label="Cat & Mouse — home" class="flex flex-col sm:flex-row items-center sm:space-x-6 space-y-4 sm:space-y-0">
-    {{ with resources.Get "images/logo.svg" }}
-      <img src="{{ .RelPermalink }}" alt="Cat & Mouse logo" class="w-24 h-24">
-    {{ end }}
+{{- $logo := resources.Get "images/logo.svg" -}}
 
-    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900">
-      Команда переводчиков &laquo;Cat &amp; Mouse&raquo;
-    </h1>
+{{- if not $logo -}}
+  {{- errorf "Logo not found: assets/images/logo.svg" -}}
+{{- end -}}
+
+{{- if not hugo.IsDevelopment -}}
+  {{- $logo = $logo | fingerprint "sha256" -}}
+{{- end -}}
+
+{{- $brand := `Команда переводчиков &laquo;Cat &amp; Mouse&raquo;` -}}
+{{- $pageTitle := "" -}}
+
+{{- if eq .Kind "404" -}}
+  {{- $pageTitle = "Страница не найдена" -}}
+{{- else if not .IsHome -}}
+  {{- $pageTitle = .Title -}}
+{{- end -}}
+
+<header class="border-b border-slate-300 bg-slate-50 text-center py-12 flex flex-col items-center">
+  <a
+    href="{{ .Site.Home.RelPermalink }}"
+    aria-label="На главную"
+    class="flex flex-col sm:flex-row items-center sm:space-x-6 space-y-4 sm:space-y-0"
+  >
+    <img
+      src="{{ $logo.RelPermalink }}"
+      alt=""
+      width="96"
+      height="96"
+      class="w-24 h-24"
+      aria-hidden="true"
+    >
+
+    {{- if .IsHome }}
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900">
+        {{ $brand | safeHTML }}
+      </h1>
+    {{- else }}
+      <span class="text-3xl sm:text-5xl font-extrabold text-slate-900">
+        {{ $brand | safeHTML }}
+      </span>
+    {{- end }}
   </a>
 
-  {{ if .Title }}
-    <h2 class="text-2xl sm:text-3xl mt-6 text-slate-700 font-semibold">
-      {{ .Title }}
-    </h2>
-  {{ end }}
+  {{- with $pageTitle }}
+    <h1 class="text-2xl sm:text-3xl mt-6 text-slate-700 font-semibold">
+      {{ . }}
+    </h1>
+  {{- end }}
 </header>

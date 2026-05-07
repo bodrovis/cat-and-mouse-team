@@ -1,5 +1,32 @@
 {{- $href := .Get "href" -}}
-<a href="{{ $href }}" rel="noopener" target="_blank"
-   class="text-slate-900 border border-slate-900 px-4 py-2 rounded-lg text-lg sm:text-xl hover:bg-slate-900 hover:text-white transition duration-300 inline-flex items-center space-x-2">
-  <span>{{ .Inner }}</span><span>&#x2197;</span>
+
+{{- if not $href -}}
+  {{- errorf "Shortcode %q requires href. See %s" .Name .Position -}}
+{{- end -}}
+
+{{- $url := urls.Parse $href -}}
+{{- $isExternal := or (eq $url.Scheme "http") (eq $url.Scheme "https") -}}
+
+<a
+  href="{{ $href }}"
+  {{- if $isExternal }} rel="noopener noreferrer" target="_blank"{{ end }}
+  class="text-slate-900 border border-slate-900 px-4 py-2 rounded-lg text-lg sm:text-xl hover:bg-slate-900 hover:text-white transition duration-300 inline-flex items-center gap-2"
+>
+  <span>{{ .Inner }}</span>
+
+  {{- if $isExternal }}
+    <svg
+      aria-hidden="true"
+      class="size-5 shrink-0"
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M7 7h6v6" />
+      <path d="M7 13 13 7" />
+    </svg>
+  {{- end }}
 </a>
