@@ -1,29 +1,35 @@
 ---
-title: "Переводы и книги"
-description: "Официальные и фанатские переводы Cat&Mouse: книги, игры, руководства и материалы на русском языке."
+title: "Translations and books"
+description: "Official and fan translations by Cat&Mouse, including books, games, guides, and other projects."
 ---
 
 {{< translation
   id="vedmak"
-  title="Ведьмак: Возвращение в Элизиум. Дело о повешенном."
-  status="progress"
-  href="https://bodrovis.tech/tags/%D0%B2%D0%B5%D0%B4%D1%8C%D0%BC%D0%B0%D0%BA-%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8D%D0%BB%D0%B8%D0%B7%D0%B8%D1%83%D0%BC/"
-  button="В блоге"
+  title="The Witcher: Return to Elysium. The Hanged Man Case"
+  status="done"
+  href="https://bodrovis.tech/tags/%D0%B2%D0%B5%D0%B4%D1%8C%D0%BC%D0%B0%D0%BA-%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8D%D0%BB%D0%B8%D0%B7%D0%B8%D1%8E%D0%BC/"
+  button="Read on our blog"
 >}}
-Наша книга, представляющая собой фанфик по двум вселенным: The Witcher и Disco Elysium. Что будет, если с Геральтом произойдёт та же неприятность, что с лейтенантом Дюбуа? Сумеет ли он раскрыть дело и вспомнить, что с ним вообще произошло? В книге есть и детективная составляющая, и абсурд, и поиски себя.
+Our own book, a crossover fanfiction combining the worlds of The Witcher and Disco Elysium. What would happen if Geralt suffered the same unfortunate fate as Lieutenant Du Bois? Can he solve the case and remember what happened to him in the first place? The book combines detective fiction, absurdity, and a search for identity.
+
+Currently available in Russian.
 {{< /translation >}}
 
 {{< translation
   id="lost-in-panama"
-  title="Исчезнувшие в Панаме: История трагедии на тропе Пианиста"
+  title="Lost in Panama: The Tragedy of the Pianista Trail"
   status="done"
   href="https://www.litres.ru/72466783/"
-  button="На сайте ЛитРес"
+  button="View on LitRes"
 >}}
-Официальный перевод и аудиоверсия книги "Still Lost in Panama" ("Verschollen in Panama: Die wahre Tragödie vom Pianista Trail"). Одно из самых загадочных и противоречивых дел в жанре true crime — исчезновение нидерландских туристок Лисанн Фрон и Крис Кремерс на тропе Пианиста 1 апреля 2014 года. Журналисты-расследователи Кристиан Хардингхаус и Аннетт Неннер впервые получили возможность досконально проанализировать официальные материалы дела и судебно-медицинские заключения. Их скрупулёзная работа в течение пяти месяцев позволила выявить фатальные ошибки следствия. Также они лично опросили всех важных свидетелей и нашли новые улики. Неннер исследовала туманные панамские леса днём и ночью, отслеживая пути, которыми могли пройти Крис и Лисанн.
+The official Russian translation and audiobook edition of *Still Lost in Panama* (*Verschollen in Panama: Die wahre Tragödie vom Pianista Trail*).
 
-- SlimLizzy — перевод
-- Ailura — вычитка, редактура, контроль качества
+The book examines one of the most mysterious and controversial true crime cases: the disappearance of Dutch tourists Lisanne Froon and Kris Kremers on the Pianista Trail on April 1, 2014. Investigative journalists Christian Hardinghaus and Annette Nenner were given access to official case files and forensic reports, which they analyzed in detail. Their five-month investigation uncovered serious mistakes in the original inquiry. They also interviewed key witnesses, found new evidence, and retraced the possible routes taken by Kris and Lisanne through the Panamanian cloud forest.
+
+Available in Russian.
+
+- SlimLizzy — translation
+- Ailura — proofreading, editing, and quality assurance
 {{< /translation >}}
 
 {{< translation
@@ -31,12 +37,14 @@ description: "Официальные и фанатские переводы Cat&
   title="The Case of the Golden Idol"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3034346175"
-  button="На сайте Steam"
+  button="View on Steam"
 >}}
-Полный перевод игры и всех DLC, а также подсказки и решения каждого дела. Доступно в виде руководства Steam. Кроме того, коллега voltamper приложил титанические усилия, чтобы выпустить полноценный русификатор, частично основанный на этом гайде. Информация о русификаторе [доступна в этом обсуждении](https://steamcommunity.com/app/1677770/discussions/0/3833171785699386747).
+A complete Russian translation of the game and all its DLC, including hints and solutions for every case. It is available as a Steam guide. In addition, fellow community member voltamper put a tremendous amount of work into creating a full Russian localization patch based in part on this guide. Information about the patch is [available in this discussion](https://steamcommunity.com/app/1677770/discussions/0/3833171785699386747).
 
-- SlimLizzy — перевод и руководство
-- Ailura — вычитка, редактура, контроль качества
+Available in Russian.
+
+- SlimLizzy — translation and guide
+- Ailura — proofreading, editing, and quality assurance
 {{< /translation >}}
 
 {{< translation
@@ -44,12 +52,14 @@ description: "Официальные и фанатские переводы Cat&
   title="Chrono Cross"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3294164624"
-  button="На сайте Steam"
+  button="View on Steam"
 >}}
-Литературный перевод игры на русский язык.
+A literary Russian translation of the game.
 
-- SlimLizzy — перевод
-- Ailura — вычитка, редактура, контроль качества
+Available in Russian.
+
+- SlimLizzy — translation
+- Ailura — proofreading, editing, and quality assurance
 {{< /translation >}}
 
 {{< translation
@@ -57,10 +67,12 @@ description: "Официальные и фанатские переводы Cat&
   title="The Rise of the Golden Idol"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3364689873"
-  button="На сайте Steam"
+  button="View on Steam"
 >}}
-Перевод игры, а также подсказки и решения каждого дела.
+A Russian translation of the game, including hints and solutions for every case.
 
-- SlimLizzy — перевод и руководство
-- Ailura — вычитка, редактура, контроль качества
+Available in Russian.
+
+- SlimLizzy — translation and guide
+- Ailura — proofreading, editing, and quality assurance
 {{< /translation >}}

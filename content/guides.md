@@ -1,44 +1,46 @@
 ---
-title: "Руководства"
-description: "Подробные руководства Cat&Mouse по играм: прохождения, объяснения, хронологии и разборы сценариев."
+title: "Guides"
+description: "Detailed Cat&Mouse game guides, including walkthroughs, explanations, timelines, and story analysis."
 ---
+
+> **Note:** All guides listed on this page are available in Russian only.
 
 {{< guide
   id="chrono-cross-details"
-  title="Chrono Cross: Хронология, анализ и объяснение ключевых элементов сценария"
+  title="Chrono Cross: Timeline, analysis, and explanation of key story elements"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3346527912"
   author="SlimLizzy"
 >}}
-Детальное описание ключевых сценарных моментов, персонажей и артефактов на основе дополнительных материалов из Ultimania, а также хронология игровых событий.
+A detailed look at key story events, characters, and artifacts, based on additional material from Ultimania, along with a timeline of the game's events.
 {{< /guide >}}
 
 {{< guide
   id="case-of-golden-idol-walkthrough"
-  title="The Case of the Golden Idol: Объяснения для каждого дела"
+  title="The Case of the Golden Idol: Explanations for every case"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3104428057"
   author="SlimLizzy"
 >}}
-Это руководство содержит в себе не просто решение для каждого дела The Case of the Golden Idol, но ещё и ход рассуждений и объяснения. Если вы застряли, но не хотите сразу открывать готовое решение, то вам сюда!
+This guide provides not only the solution to every case in The Case of the Golden Idol, but also the reasoning behind it. If you're stuck but don't want to reveal the full solution right away, this guide is for you.
 {{< /guide >}}
 
 {{< guide
   id="return-of-obra-dinn-walkthrough"
-  title="Return of the Obra Dinn: Прохождение и ход рассуждений"
+  title="Return of the Obra Dinn: Walkthrough and reasoning"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3128760915"
   author="SlimLizzy"
 >}}
-Это прохождение игры "Return of the Obra Dinn", которое представляет собой подробный ход рассуждений по каждому члену экипажа и пассажиру. Если вы не понимаете, как устанавливать личности или причины смерти, то вам сюда!
+A detailed Return of the Obra Dinn walkthrough explaining the reasoning used to identify each crew member and passenger. If you're having trouble figuring out identities or causes of death, this guide should help.
 {{< /guide >}}
 
 {{< guide
   id="legend-of-heroes-fc-nightmare"
-  title="The Legend of Heroes: Trails in the Sky: Уровень сложности Nightmare (Кошмар). Новая игра с нуля"
+  title="The Legend of Heroes: Trails in the Sky FC: Nightmare difficulty from a fresh game"
   status="done"
   href="https://steamcommunity.com/sharedfiles/filedetails/?id=3014425796"
   author="SlimLizzy"
 >}}
-Это полное прохождение Trails in the Sky FC на максимальном уровне сложности Nightmare (Кошмар) с нуля, то есть без Новой игры+. Кроме того, здесь описывается порядок получения достижений в игре.
+A complete Trails in the Sky FC walkthrough on the highest difficulty, Nightmare, starting from a fresh game without New Game+. It also covers how to obtain the game's achievements.
 {{< /guide >}}

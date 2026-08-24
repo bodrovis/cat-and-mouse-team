@@ -1,7 +1,7 @@
 {{- $id := .Get "id" -}}
 {{- $title := .Get "title" -}}
 {{- $href := .Get "href" -}}
-{{- $button := .Get "button" | default "Открыть" -}}
+{{- $button := .Get "button" | default "Open" -}}
 {{- $status := .Get "status" | default "done" -}}
 
 {{- if or (not $id) (not $title) (not $href) -}}
@@ -15,9 +15,9 @@
 -}}
 
 {{- $statusText := dict
-  "done" "Завершено"
-  "progress" "В работе"
-  "planned" "Запланировано"
+  "done" "Completed"
+  "progress" "In progress"
+  "planned" "Planned"
 -}}
 
 {{- $bg := index $statusClass $status | default "bg-slate-500" -}}

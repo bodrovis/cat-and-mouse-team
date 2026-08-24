@@ -8,11 +8,11 @@
   {{- $logo = $logo | fingerprint "sha256" -}}
 {{- end -}}
 
-{{- $brand := `Команда переводчиков &laquo;Cat &amp; Mouse&raquo;` -}}
+{{- $brand := `Cat &amp; Mouse Translation Team` -}}
 {{- $pageTitle := "" -}}
 
 {{- if eq .Kind "404" -}}
-  {{- $pageTitle = "Страница не найдена" -}}
+  {{- $pageTitle = "Page not found" -}}
 {{- else if not .IsHome -}}
   {{- $pageTitle = .Title -}}
 {{- end -}}
@@ -20,7 +20,7 @@
 <header class="border-b border-slate-300 bg-slate-50 text-center py-12 flex flex-col items-center">
   <a
     href="{{ .Site.Home.RelPermalink }}"
-    aria-label="На главную"
+    aria-label="Home"
     class="flex flex-col sm:flex-row items-center sm:space-x-6 space-y-4 sm:space-y-0"
   >
     <img
