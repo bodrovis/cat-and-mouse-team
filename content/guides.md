@@ -3,8 +3,6 @@ title: "Guides"
 description: "Detailed Cat&Mouse game guides, including walkthroughs, explanations, timelines, and story analysis."
 ---
 
-> **Note:** All guides listed on this page are available in Russian only.
-
 {{< guide
   id="chrono-cross-details"
   title="Chrono Cross: Timeline, analysis, and explanation of key story elements"
@@ -44,3 +42,5 @@ A detailed Return of the Obra Dinn walkthrough explaining the reasoning used to 
 >}}
 A complete Trails in the Sky FC walkthrough on the highest difficulty, Nightmare, starting from a fresh game without New Game+. It also covers how to obtain the game's achievements.
 {{< /guide >}}
+
+> **Note:** All guides listed on this page are available in Russian only.
