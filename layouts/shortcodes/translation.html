@@ -23,10 +23,33 @@
 {{- $bg := index $statusClass $status | default "bg-slate-500" -}}
 {{- $label := index $statusText $status | default $status -}}
 
-<section aria-labelledby="{{ $id }}" class="mb-10 border-b border-slate-900 pb-8 last:border-b-0 last:pb-0">
-  <h2 id="{{ $id }}" class="group text-xl sm:text-2xl font-semibold mb-4 scroll-mt-24">
-    <a href="#{{ $id }}" class="no-underline text-inherit">
+{{- $links := slice (dict "href" $href "button" $button) -}}
+
+{{- $ctx := . -}}
+{{- range seq 2 10 -}}
+  {{- $n := . -}}
+  {{- $linkHref := $ctx.Get (printf "href%d" $n) -}}
+
+  {{- if $linkHref -}}
+    {{- $linkButton := $ctx.Get (printf "button%d" $n) | default "Open" -}}
+    {{- $links = $links | append (dict "href" $linkHref "button" $linkButton) -}}
+  {{- end -}}
+{{- end -}}
+
+<section
+  aria-labelledby="{{ $id }}"
+  class="mb-10 border-b border-slate-900 pb-8 last:border-b-0 last:pb-0"
+>
+  <h2
+    id="{{ $id }}"
+    class="group text-xl sm:text-2xl font-semibold mb-4 scroll-mt-24"
+  >
+    <a
+      href="#{{ $id }}"
+      class="no-underline text-inherit"
+    >
       {{ $title }}
+
       <span
         aria-hidden="true"
         class="opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition ml-2 text-slate-500 hover:text-slate-700"
@@ -35,25 +58,51 @@
   </h2>
 
   <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-    <span class="{{ $bg }} text-white px-4 py-2 rounded-lg inline-flex items-center gap-2 font-semibold">
-      <svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.31a1 1 0 0 1-1.42.006L3.29 9.27a1 1 0 1 1 1.42-1.414l4.04 4.04 6.54-6.6a1 1 0 0 1 1.414-.006Z" clip-rule="evenodd" />
+    <span
+      class="{{ $bg }} text-white px-4 py-2 rounded-lg inline-flex items-center gap-2 font-semibold"
+    >
+      <svg
+        aria-hidden="true"
+        class="size-5 shrink-0"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.31a1 1 0 0 1-1.42.006L3.29 9.27a1 1 0 1 1 1.42-1.414l4.04 4.04 6.54-6.6a1 1 0 0 1 1.414-.006Z"
+          clip-rule="evenodd"
+        />
       </svg>
+
       <span>{{ $label }}</span>
     </span>
 
-    <a
-      href="{{ $href }}"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="text-slate-900 border border-slate-900 px-4 py-2 rounded-lg text-lg sm:text-xl hover:bg-slate-900 hover:text-white transition duration-300 inline-flex items-center gap-2"
-    >
-      <span>{{ $button }}</span>
-      <svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M7 7h6v6" />
-        <path d="M7 13 13 7" />
-      </svg>
-    </a>
+    <div class="flex flex-wrap gap-3">
+      {{- range $links }}
+        <a
+          href="{{ .href }}"
+          rel="noopener noreferrer"
+          target="_blank"
+          class="text-slate-900 border border-slate-900 px-4 py-2 rounded-lg text-lg sm:text-xl hover:bg-slate-900 hover:text-white transition duration-300 inline-flex items-center gap-2"
+        >
+          <span>{{ .button }}</span>
+
+          <svg
+            aria-hidden="true"
+            class="size-5 shrink-0"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M7 7h6v6" />
+            <path d="M7 13 13 7" />
+          </svg>
+        </a>
+      {{- end }}
+    </div>
   </div>
 
   {{- $contentOpts := dict "display" "block" -}}

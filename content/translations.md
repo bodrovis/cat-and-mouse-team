@@ -4,15 +4,35 @@ description: "Official and fan translations by Cat&Mouse, including books, games
 ---
 
 {{< translation
+  id="louis-wain-ru"
+  title="Луис Уэйн: болезнь, искусство и исторические свидетельства"
+  status="done"
+  href="https://bodrovis.tech/posts/luis-ueyn-bolezn-iskusstvo-istoricheskie-svidetelstva/"
+  button="Читать в нашем блоге"
+>}}
+Подробное исследование жизни и болезни британского художника Луиса Уэйна, известного своими рисунками кошек. Мы разбираем биографии, газетные публикации, архивные документы и сохранившиеся медицинские записи, а также исследуем происхождение знаменитого мифа о «распадающихся» кошках. Статья доступна на русском языке.
+{{< /translation >}}
+
+{{< translation
+  id="louis-wain-en"
+  title="Louis Wain: Illness, Art, and Historical Evidence"
+  status="done"
+  href="https://bodrovis.tech/posts/louis-wain-illness-art-historical-evidence/"
+  button="Read on our blog"
+>}}
+A detailed investigation into the life and illness of British artist Louis Wain, best known for his drawings of cats. We examine biographies, contemporary newspapers, archival documents, and surviving medical records, as well as the origins of the famous myth of the “disintegrating cats”. Available in English.
+{{< /translation >}}
+
+{{< translation
   id="vedmak"
   title="The Witcher: Return to Elysium. The Hanged Man Case"
   status="done"
   href="https://bodrovis.tech/tags/%D0%B2%D0%B5%D0%B4%D1%8C%D0%BC%D0%B0%D0%BA-%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8D%D0%BB%D0%B8%D0%B7%D0%B8%D1%83%D0%BC/"
-  button="Read on our blog"
+  button="Read on our blog (ru)"
+  href2="https://bodrovis.tech/tags/witcher-return-to-elysium/"
+  button2="Read on our blog (en)"
 >}}
 Our own book, a crossover fanfiction combining the worlds of The Witcher and Disco Elysium. What would happen if Geralt suffered the same unfortunate fate as Lieutenant Du Bois? Can he solve the case and remember what happened to him in the first place? The book combines detective fiction, absurdity, and a search for identity.
-
-Currently available in Russian.
 {{< /translation >}}
 
 {{< translation
